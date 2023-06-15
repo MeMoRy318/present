@@ -1,0 +1,57 @@
+.closeBtn {
+display: flex;
+    justify-content: flex-end;
+    background: #4E4444;
+    padding: 10px;
+}
+
+.postsWrap {
+display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    background: #757575;
+    height: 100%;
+}
+
+.postsWrap__block {
+    width:33%;
+    font-size: 12px;
+    margin: 1%;
+    background: #111111;
+    border-radius: 5px;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.btnWrap button{
+    border: none;
+    padding: 5px 10px;
+    background: #fdab62;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 7px;
+    border-radius: 3px;
+    transition: 0.7s ease;
+}
+.btnWrap button:hover{
+    transform: scale(1.1);
+    color: #4E4444;
+    background: #c0c0c0;
+}
+.btnWrap button:active{
+    transform: scale(1);
+}
+#pagination{
+    background: #757575;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px 5px 15px;
+
+}
+
+.postContend{
+    height: 100%;
+
+}

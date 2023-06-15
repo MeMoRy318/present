@@ -1,0 +1,252 @@
+html, body {
+    min-height: 100%;
+    color: #ffffff;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Barlow, sans-serif;
+    background: url('../img/person.jpg') center/ cover no-repeat fixed;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Колір затемнення */
+    z-index: -1;
+    height: 100vh;
+}
+
+header {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 45%;
+}
+
+.header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.header__text {
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid white;
+    padding-top: 3%;
+    position: relative;
+
+
+}
+
+.header__nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 18px;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    margin-right: 10%;
+}
+
+.header__link_active:before {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 30px;
+    background: white;
+    position: absolute;
+    top: 0;
+    transform: rotate(130deg);
+    margin-left: 1.5%;
+}
+
+.header__link:before {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 30px;
+    background: white;
+    position: absolute;
+    top: 0;
+    transform: rotate(45deg);
+    margin-left: 2%;
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+
+.header__link:hover:before {
+    opacity: 1;
+    transform: rotate(130deg);
+}
+
+/*=====================================================main==========================================================*/
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 65%;
+}
+
+.users{
+    height: 100%;
+}
+
+.hidden{
+    display: none;
+}
+.users__icon_close{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+}
+#icon_close , #close,#closePosts{
+   background: #fdab62;
+    transition: 0.9s ease;
+    border-radius: 5px;
+}
+#icon_close:hover,#close:hover,#closePosts:hover{
+    color: #4E4444;
+    background: white;
+}
+.user__card{
+    height: 100%;
+    background: #111111;
+    width: 80%;
+    margin: 0 auto;
+}
+.users__row{
+    height: 70%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.users__img{
+    width:50% ;
+    height: 100%;
+}
+.users__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.users__body{
+ height: 100%;
+    width: 40%;
+}
+.users__title{
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: inherit;
+    margin: 0;
+}
+.users__text p{
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #a5a5a5;
+    font-family: Barlow sans-serif;
+}
+
+.users__btn button{
+background: #fdab62;
+    border: none;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    margin-right: 4%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.users__btn button:hover{
+    transform: scale(1.03);
+}
+.users__btn button:active{
+    transform: scale(1);
+}
+.material-symbols-outlined{
+    font-size: 36px;
+    cursor: pointer;
+}
+
+footer{
+    margin-top: 10%;
+    display: flex;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+    background:rgba(0, 0, 0, 0.5) ;
+}
+
+.formContact{
+    display: flex;
+    flex-wrap: wrap;
+    width:40% ;
+    height: 100%;
+}
+.formContact{
+    width: 50%;
+    display: flex;
+}
+.formContact div{
+    width: 99%;
+}
+.formContact input{
+   padding: 10px;
+    width: 40%;
+    outline: none;
+   font-family: 'Jost', sans-serif;
+}
+.formContact textarea{
+    padding: 10px;
+    width: 85%;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+}
+.formContact button {
+    padding: 11px;
+    width: 43%;
+    color: white;
+    background: #fdab62;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-left: 1%;
+}
+
+.users__list li{
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #f3f3f3;
+    font-family: Barlow sans-serif;
+    margin-top: 2%;
+
+}
+
